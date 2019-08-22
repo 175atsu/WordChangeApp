@@ -23,8 +23,16 @@ class RubiModel {
         let output_type: String
     }
 
-    func change (word: String) -> String {
+    typealias CompletionClosure = ((_ result:String) -> String)
 
+    func change (word: String)  {
+        
+//        api(word: word, completionClosure: {(result:String) in
+//            return result
+//        })
+    }
+
+    func api (word: String, completionClosure: @escaping ((_ result:String) -> Void)) {
         guard let reqUrl = URL(string: "https://labs.goo.ne.jp/api/hiragana") else{
             fatalError("message")
         }
@@ -48,7 +56,7 @@ class RubiModel {
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
 
         var afterWord = ""
-        
+
         //タスク  completionHandlerを使用するとサーバと対話的に処理を行います。 サーバに接続し、返って来たレスポンスをその場で処理する場合に使用します。
         let task = session.dataTask(with: req, completionHandler: {
             (data, response , error) in
@@ -66,15 +74,11 @@ class RubiModel {
                 }
                 let json = try decoder.decode(Rubi.self, from: data)
 
-
-//                if json.converted != nil {
-//                    afterWord = json.converted
-//                }
                 //ルビ変換された言葉格納
-
                 afterWord = json.converted ?? ""
                 print(afterWord)
 
+                completionClosure(afterWord)
             }catch{
                 //エラー処理
                 print("エラーが出ました")
@@ -82,6 +86,7 @@ class RubiModel {
         })
         //ダウンロード開始
         task.resume()
-        return afterWord
+        completionClosure("aaaaaaa")
+        //return afterWord
     }
 }
