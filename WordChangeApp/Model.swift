@@ -1,11 +1,3 @@
-//
-//  Model.swift
-//  WordChangeApp
-//
-//  Created by 飯野敦博 on 2019/08/17.
-//  Copyright © 2019 mycompany. All rights reserved.
-//
-
 import Foundation
 
 class RubiModel {
@@ -25,14 +17,7 @@ class RubiModel {
 
     typealias CompletionClosure = ((_ result:String) -> String)
 
-    func change (word: String)  {
-        
-//        api(word: word, completionClosure: {(result:String) in
-//            return result
-//        })
-    }
-
-    func api (word: String, completionClosure: @escaping ((_ result:String) -> Void)) {
+    func change (word: String, completionClosure: @escaping ((_ result:String) -> Void)) {
         guard let reqUrl = URL(string: "https://labs.goo.ne.jp/api/hiragana") else{
             fatalError("message")
         }
@@ -49,7 +34,6 @@ class RubiModel {
         guard let unwrappedUploadData = uploadData else {
             fatalError("message")
         }
-
         //Bodyにセット
         req.httpBody = unwrappedUploadData
         //データ転送を管理するためのセッションを生成
@@ -57,7 +41,7 @@ class RubiModel {
 
         var afterWord = ""
 
-        //タスク  completionHandlerを使用するとサーバと対話的に処理を行います。 サーバに接続し、返って来たレスポンスをその場で処理する場合に使用します。
+        //タスク
         let task = session.dataTask(with: req, completionHandler: {
             (data, response , error) in
 
@@ -68,12 +52,10 @@ class RubiModel {
                 //デコーダ
                 let decoder = JSONDecoder()
                 //受け取ったJSONデータをパース（解析）して格納
-
                 guard let data = data else {
                     return
                 }
                 let json = try decoder.decode(Rubi.self, from: data)
-
                 //ルビ変換された言葉格納
                 afterWord = json.converted ?? ""
                 print(afterWord)
@@ -86,7 +68,5 @@ class RubiModel {
         })
         //ダウンロード開始
         task.resume()
-        completionClosure("aaaaaaa")
-        //return afterWord
     }
 }

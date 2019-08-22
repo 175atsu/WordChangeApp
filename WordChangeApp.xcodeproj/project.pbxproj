@@ -12,7 +12,6 @@
 		20833E43230720C0008C14CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20833E41230720C0008C14CB /* Main.storyboard */; };
 		20833E45230720C3008C14CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20833E44230720C3008C14CB /* Assets.xcassets */; };
 		20833E48230720C3008C14CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20833E46230720C3008C14CB /* LaunchScreen.storyboard */; };
-		20833E5223084298008C14CB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20833E5123084298008C14CB /* View.swift */; };
 		20833E5423084400008C14CB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20833E5323084400008C14CB /* Model.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		20833E44230720C3008C14CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20833E47230720C3008C14CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20833E49230720C3008C14CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20833E5123084298008C14CB /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		20833E5323084400008C14CB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +58,6 @@
 			children = (
 				20833E3D230720C0008C14CB /* AppDelegate.swift */,
 				20833E3F230720C0008C14CB /* ViewController.swift */,
-				20833E5123084298008C14CB /* View.swift */,
 				20833E41230720C0008C14CB /* Main.storyboard */,
 				20833E5323084400008C14CB /* Model.swift */,
 				20833E44230720C3008C14CB /* Assets.xcassets */,
@@ -143,7 +140,6 @@
 			files = (
 				20833E40230720C0008C14CB /* ViewController.swift in Sources */,
 				20833E3E230720C0008C14CB /* AppDelegate.swift in Sources */,
-				20833E5223084298008C14CB /* View.swift in Sources */,
 				20833E5423084400008C14CB /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
