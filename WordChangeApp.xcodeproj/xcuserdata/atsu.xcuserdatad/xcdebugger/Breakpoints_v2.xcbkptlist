@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WordChangeApp/Model.swift"
-            timestampString = "588051324.035881"
+            filePath = "WordChangeApp/ViewController.swift"
+            timestampString = "588074832.187502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "change(word:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "changeButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WordChangeApp/Model.swift"
+            timestampString = "588074832.188352"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "api(word:completionClosure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
