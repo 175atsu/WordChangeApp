@@ -18,59 +18,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uVS-uM-c9S">
-                                <rect key="frame" x="87" y="190" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="にゅうりょくしてください" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA7-VA-Ukc">
+                                <rect key="frame" x="87" y="548" width="240" height="20.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA7-VA-Ukc">
-                                <rect key="frame" x="186" y="658" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="7NH-Gq-mNF"/>
+                                    <constraint firstAttribute="width" constant="240" id="DUU-xz-mW3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJf-Uo-EdY">
-                                <rect key="frame" x="192" y="507" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="変換"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJf-Uo-EdY">
+                                <rect key="frame" x="166.5" y="418" width="81" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="変換">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="changeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TTs-uC-5b6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ルビを振る言葉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amV-3z-Ns8">
+                                <rect key="frame" x="87" y="197" width="121.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="入力してください" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uVS-uM-c9S">
+                                <rect key="frame" x="87" y="248" width="240" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="278-29-w6k"/>
+                                    <constraint firstAttribute="height" constant="100" id="Eez-eJ-pep"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pA7-VA-Ukc" secondAttribute="trailing" constant="87" id="3eI-VR-Br2"/>
+                            <constraint firstItem="pA7-VA-Ukc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="3z4-Eb-uYs"/>
+                            <constraint firstItem="pA7-VA-Ukc" firstAttribute="top" secondItem="zJf-Uo-EdY" secondAttribute="bottom" constant="70" id="8Ju-oF-uTY"/>
+                            <constraint firstItem="uVS-uM-c9S" firstAttribute="top" secondItem="amV-3z-Ns8" secondAttribute="bottom" constant="30" id="9Vx-gN-Gam"/>
+                            <constraint firstItem="uVS-uM-c9S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Kji-cS-M1u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uVS-uM-c9S" secondAttribute="trailing" constant="87" id="XJX-xH-l62"/>
+                            <constraint firstItem="amV-3z-Ns8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="eZV-Zb-Gah"/>
+                            <constraint firstItem="zJf-Uo-EdY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fIN-xM-Dxy"/>
+                            <constraint firstItem="zJf-Uo-EdY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oZn-Jk-AhD"/>
+                            <constraint firstItem="zJf-Uo-EdY" firstAttribute="top" secondItem="uVS-uM-c9S" secondAttribute="bottom" constant="70" id="wDH-YI-Uoj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ffY-RV-mtq"/>
                     <connections>
                         <outlet property="afterTextt" destination="pA7-VA-Ukc" id="oHV-Qx-PDU"/>
                         <outlet property="beforeText" destination="uVS-uM-c9S" id="kdW-Gq-qW2"/>
+                        <outlet property="textView" destination="uVS-uM-c9S" id="xEa-5W-Yic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="126"/>
+            <point key="canvasLocation" x="144.92753623188406" y="125.89285714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="Ihl-AW-pIl">
             <objects>
-                <viewController id="0Ar-1y-dvG" sceneMemberID="viewController">
+                <viewController id="0Ar-1y-dvG" customClass="StartViewController" customModule="WordChangeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TZ9-Uv-4Oq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ロゴ" translatesAutoresizingMaskIntoConstraints="NO" id="xAd-dl-HGd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ロゴ" translatesAutoresizingMaskIntoConstraints="NO" id="xAd-dl-HGd">
+                                <rect key="frame" x="-9" y="51.5" width="432" height="793"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xAd-dl-HGd" firstAttribute="centerX" secondItem="TZ9-Uv-4Oq" secondAttribute="centerX" id="MRF-I9-D3d"/>
+                            <constraint firstItem="xAd-dl-HGd" firstAttribute="centerY" secondItem="TZ9-Uv-4Oq" secondAttribute="centerY" id="dD4-a4-9DN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MRo-vb-3cq"/>
                     </view>
+                    <connections>
+                        <outlet property="log" destination="xAd-dl-HGd" id="oYW-RU-3Vz"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toGreen" id="rj5-M4-0w9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xW5-6S-Rgu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
